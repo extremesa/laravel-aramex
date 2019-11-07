@@ -1,7 +1,13 @@
 {
     "name": "extremesa/aramex",
-    "description": "",
+    "description": "Integrate Laravel project with Aramex.",
     "keywords": [
+    ],
+    "authors": [
+        {
+            "name": "Ismail Ashour",
+            "email": "iashour@extreme.sa"
+        }
     ],
     "license": "MIT",
     "require": {
