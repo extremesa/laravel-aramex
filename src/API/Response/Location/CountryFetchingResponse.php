@@ -10,7 +10,7 @@ class CountryFetchingResponse extends Response
     private $country;
 
     /**
-     * @return Country
+     * @return array
      */
     public function getCountry(): array
     {
@@ -35,7 +35,7 @@ class CountryFetchingResponse extends Response
     {
         parent::parse($obj);
 
-        if ($country = $obj->Country){
+        if ($country = $obj->Country) {
             $this->setCountry(
                 (new Country())
                     ->setCode($country->Code)
@@ -52,7 +52,7 @@ class CountryFetchingResponse extends Response
 
     /**
      * @param object $obj
-     * @return RateResponse
+     * @return CountryFetchingResponse
      */
     public static function make($obj)
     {

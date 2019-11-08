@@ -2,10 +2,10 @@
 
 namespace ExtremeSa\Aramex\API\Requests\Shipping;
 
+use Exception;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Shipping\ReserveRangeResponse;
-use Exception;
 
 /**
  * This method allows you to reserve a range of shipment numbers.
@@ -67,7 +67,7 @@ class ReserveShipmentNumberRange extends API implements Normalize
      * Example: LON for London station
      *
      * @param string $entity
-     * @return ReserveRange
+     * @return ReserveShipmentNumberRange
      */
     public function setEntity(string $entity): ReserveShipmentNumberRange
     {
@@ -89,7 +89,7 @@ class ReserveShipmentNumberRange extends API implements Normalize
      * DOM = Domestic
      *
      * @param string $productGroup
-     * @return ReserveRange
+     * @return ReserveShipmentNumberRange
      */
     public function setProductGroup(string $productGroup): ReserveShipmentNumberRange
     {
@@ -110,7 +110,7 @@ class ReserveShipmentNumberRange extends API implements Normalize
      * Allowed Values: 1-5000
      *
      * @param int $count
-     * @return ReserveRange
+     * @return ReserveShipmentNumberRange
      */
     public function setCount(int $count): ReserveShipmentNumberRange
     {

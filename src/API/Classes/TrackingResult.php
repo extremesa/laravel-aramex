@@ -205,12 +205,11 @@ class TrackingResult
 
     /**
      * @param object $obj
-     * @return Track
+     * @return TrackingResult
      */
     public static function parse($obj)
     {
         $obj = $obj->Value->TrackingResult;
-
 
         return (new self())
             ->setWaybillNumber($obj->WaybillNumber)

@@ -2,12 +2,12 @@
 
 namespace ExtremeSa\Aramex\API\Requests\Shipping;
 
+use Exception;
 use ExtremeSa\Aramex\API\Classes\Address;
-use ExtremeSa\Aramex\API\Classes\ScheduledDelivery as Resource;
+use ExtremeSa\Aramex\API\Classes\ScheduledDelivery;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
-use ExtremeSa\Aramex\API\Response\ScheduledDeliveryResponse;
-use Exception;
+use ExtremeSa\Aramex\API\Response\Shipping\ScheduledDeliveryResponse;
 
 /**
  * This method allows you to schedule the delivery of a shipment at a specified time and place (Longitude and Latitude)
@@ -53,27 +53,27 @@ class ScheduleDelivery extends API implements Normalize
 
     /**
      * @param Address $address
-     * @return ScheduledDelivery
+     * @return ScheduleDelivery
      */
-    public function setAddress(Address $address): ScheduledDelivery
+    public function setAddress(Address $address): ScheduleDelivery
     {
         $this->address = $address;
         return $this;
     }
 
     /**
-     * @return Resource
+     * @return ScheduledDelivery
      */
-    public function getScheduledDelivery(): Resource
+    public function getScheduledDelivery(): ScheduledDelivery
     {
         return $this->scheduledDelivery;
     }
 
     /**
-     * @param mixed $scheduledDelivery
-     * @return ScheduledDelivery
+     * @param ScheduledDelivery $scheduledDelivery
+     * @return ScheduleDelivery
      */
-    public function setScheduledDelivery($scheduledDelivery): ScheduledDelivery
+    public function setScheduledDelivery(ScheduledDelivery $scheduledDelivery): ScheduleDelivery
     {
         $this->scheduledDelivery = $scheduledDelivery;
         return $this;
@@ -89,9 +89,9 @@ class ScheduleDelivery extends API implements Normalize
 
     /**
      * @param string $shipmentNumber
-     * @return ScheduledDelivery
+     * @return ScheduleDelivery
      */
-    public function setShipmentNumber(string $shipmentNumber): ScheduledDelivery
+    public function setShipmentNumber(string $shipmentNumber): ScheduleDelivery
     {
         $this->shipmentNumber = $shipmentNumber;
         return $this;
@@ -107,9 +107,9 @@ class ScheduleDelivery extends API implements Normalize
 
     /**
      * @param string $productGroup
-     * @return ScheduledDelivery
+     * @return ScheduleDelivery
      */
-    public function setProductGroup(string $productGroup): ScheduledDelivery
+    public function setProductGroup(string $productGroup): ScheduleDelivery
     {
         $this->productGroup = $productGroup;
         return $this;
@@ -125,9 +125,9 @@ class ScheduleDelivery extends API implements Normalize
 
     /**
      * @param string $entity
-     * @return ScheduledDelivery
+     * @return ScheduleDelivery
      */
-    public function setEntity(string $entity): ScheduledDelivery
+    public function setEntity(string $entity): ScheduleDelivery
     {
         $this->entity = $entity;
         return $this;
@@ -143,9 +143,9 @@ class ScheduleDelivery extends API implements Normalize
 
     /**
      * @param string $consigneePhone
-     * @return ScheduledDelivery
+     * @return ScheduleDelivery
      */
-    public function setConsigneePhone(string $consigneePhone): ScheduledDelivery
+    public function setConsigneePhone(string $consigneePhone): ScheduleDelivery
     {
         $this->consigneePhone = $consigneePhone;
         return $this;
@@ -161,9 +161,9 @@ class ScheduleDelivery extends API implements Normalize
 
     /**
      * @param string $shipperNumber
-     * @return ScheduledDelivery
+     * @return ScheduleDelivery
      */
-    public function setShipperNumber(string $shipperNumber): ScheduledDelivery
+    public function setShipperNumber(string $shipperNumber): ScheduleDelivery
     {
         $this->shipperNumber = $shipperNumber;
         return $this;
@@ -179,9 +179,9 @@ class ScheduleDelivery extends API implements Normalize
 
     /**
      * @param string $shipperReference
-     * @return ScheduledDelivery
+     * @return ScheduleDelivery
      */
-    public function setShipperReference(string $shipperReference): ScheduledDelivery
+    public function setShipperReference(string $shipperReference): ScheduleDelivery
     {
         $this->shipperReference = $shipperReference;
         return $this;
@@ -197,9 +197,9 @@ class ScheduleDelivery extends API implements Normalize
 
     /**
      * @param string $reference1
-     * @return ScheduledDelivery
+     * @return ScheduleDelivery
      */
-    public function setReference1(string $reference1): ScheduledDelivery
+    public function setReference1(string $reference1): ScheduleDelivery
     {
         $this->reference1 = $reference1;
         return $this;
@@ -215,9 +215,9 @@ class ScheduleDelivery extends API implements Normalize
 
     /**
      * @param string $reference2
-     * @return ScheduledDelivery
+     * @return ScheduleDelivery
      */
-    public function setReference2(string $reference2)
+    public function setReference2(string $reference2): ScheduleDelivery
     {
         $this->reference2 = $reference2;
         return $this;
@@ -233,9 +233,9 @@ class ScheduleDelivery extends API implements Normalize
 
     /**
      * @param string $reference3
-     * @return ScheduledDelivery
+     * @return ScheduleDelivery
      */
-    public function setReference3(string $reference3): ScheduledDelivery
+    public function setReference3(string $reference3): ScheduleDelivery
     {
         $this->reference3 = $reference3;
         return $this;

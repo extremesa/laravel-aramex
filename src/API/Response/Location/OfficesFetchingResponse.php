@@ -92,7 +92,6 @@ class OfficesFetchingResponse extends Response
             }
         }
 
-        dd($this->offices);
         return $this;
     }
 
@@ -108,7 +107,7 @@ class OfficesFetchingResponse extends Response
 
     /**
      * @param object $obj
-     * @return RateResponse
+     * @return OfficesFetchingResponse
      */
     public static function make($obj)
     {

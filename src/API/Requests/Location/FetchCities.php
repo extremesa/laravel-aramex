@@ -25,6 +25,7 @@ class FetchCities extends API implements Normalize
 
     /**
      * @return CitiesFetchingResponse
+     * @throws \Exception
      */
     public function fetch()
     {
@@ -43,6 +44,7 @@ class FetchCities extends API implements Normalize
 
     /**
      * @param string $countryCode
+     * @return FetchCities
      */
     public function setCountryCode(string $countryCode): FetchCities
     {
@@ -60,6 +62,7 @@ class FetchCities extends API implements Normalize
 
     /**
      * @param string|null $state
+     * @return FetchCities
      */
     public function setState(?string $state): FetchCities
     {
@@ -77,6 +80,7 @@ class FetchCities extends API implements Normalize
 
     /**
      * @param string|null $nameStartsWith
+     * @return FetchCities
      */
     public function setNameStartsWith(?string $nameStartsWith): FetchCities
     {

@@ -24,6 +24,7 @@ class PickupTrackingResponse extends Response
 
     /**
      * @param string $entity
+     * @return PickupTrackingResponse
      */
     public function setEntity($entity): PickupTrackingResponse
     {
@@ -41,6 +42,7 @@ class PickupTrackingResponse extends Response
 
     /**
      * @param string $reference
+     * @return PickupTrackingResponse
      */
     public function setReference($reference): PickupTrackingResponse
     {
@@ -58,6 +60,7 @@ class PickupTrackingResponse extends Response
 
     /**
      * @param string $collectionDate
+     * @return PickupTrackingResponse
      */
     public function setCollectionDate($collectionDate): PickupTrackingResponse
     {
@@ -75,6 +78,7 @@ class PickupTrackingResponse extends Response
 
     /**
      * @param string $pickupDate
+     * @return PickupTrackingResponse
      */
     public function setPickupDate($pickupDate): PickupTrackingResponse
     {
@@ -92,6 +96,7 @@ class PickupTrackingResponse extends Response
 
     /**
      * @param string $lastStatus
+     * @return PickupTrackingResponse
      */
     public function setLastStatus($lastStatus): PickupTrackingResponse
     {
@@ -109,6 +114,7 @@ class PickupTrackingResponse extends Response
 
     /**
      * @param string $lastStatusDescription
+     * @return PickupTrackingResponse
      */
     public function setLastStatusDescription($lastStatusDescription): PickupTrackingResponse
     {
@@ -126,6 +132,7 @@ class PickupTrackingResponse extends Response
 
     /**
      * @param string $collectedWaybills
+     * @return PickupTrackingResponse
      */
     public function setCollectedWaybills($collectedWaybills): PickupTrackingResponse
     {
@@ -135,9 +142,9 @@ class PickupTrackingResponse extends Response
 
     /**
      * @param object $obj
-     * @return self
+     * @return PickupTrackingResponse
      */
-    protected function parse($obj)
+    protected function parse($obj): PickupTrackingResponse
     {
         parent::parse($obj);
 
@@ -155,9 +162,9 @@ class PickupTrackingResponse extends Response
 
     /**
      * @param object $obj
-     * @return RateResponse
+     * @return PickupTrackingResponse
      */
-    public static function make($obj)
+    public static function make($obj): PickupTrackingResponse
     {
         return (new self())->parse($obj);
     }

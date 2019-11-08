@@ -2,9 +2,11 @@
 
 namespace ExtremeSa\Aramex\API\Requests\Tracking;
 
+use Exception;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Tracking\PickupTrackingResponse;
+use ExtremeSa\Aramex\API\Response\Tracking\RateResponse;
 
 class TrackPickup extends API implements Normalize
 {
@@ -15,6 +17,10 @@ class TrackPickup extends API implements Normalize
     private $reference;
     private $pickup;
 
+    /**
+     * @return PickupTrackingResponse
+     * @throws Exception
+     */
     public function track()
     {
         $this->validate();
@@ -25,11 +31,11 @@ class TrackPickup extends API implements Normalize
     protected function validate()
     {
         if (!$this->reference) {
-            throw new \Exception('Reference is not provided');
+            throw new Exception('Reference is not provided');
         }
 
         if (!$this->pickup) {
-            throw new \Exception('Pickup is not provided');
+            throw new Exception('Pickup is not provided');
         }
     }
 
