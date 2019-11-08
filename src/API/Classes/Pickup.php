@@ -51,7 +51,7 @@ class Pickup implements Normalize
      * @param Address $pickupAddress
      * @return Pickup
      */
-    public function setPickupAddress(Address $pickupAddress)
+    public function setPickupAddress(Address $pickupAddress): Pickup
     {
         $this->pickupAddress = $pickupAddress;
         return $this;
@@ -69,7 +69,7 @@ class Pickup implements Normalize
      * @param Contact $pickupContact
      * @return Pickup
      */
-    public function setPickupContact(Contact $pickupContact)
+    public function setPickupContact(Contact $pickupContact): Pickup
     {
         $this->pickupContact = $pickupContact;
         return $this;
@@ -87,7 +87,7 @@ class Pickup implements Normalize
      * @param string $pickupLocation
      * @return Pickup
      */
-    public function setPickupLocation(string $pickupLocation)
+    public function setPickupLocation(string $pickupLocation): Pickup
     {
         $this->pickupLocation = $pickupLocation;
         return $this;
@@ -123,10 +123,10 @@ class Pickup implements Normalize
      * Ready time should always be before latest and closingtime.
      * Date should not be before the current day or more than seven days in advance of the current date.
      *
-     * @param string $readyTime
+     * @param int $readyTime
      * @return Pickup
      */
-    public function setReadyTime(int $readyTime)
+    public function setReadyTime(int $readyTime): Pickup
     {
         $this->readyTime = $readyTime;
         return $this;
@@ -180,7 +180,7 @@ class Pickup implements Normalize
      * @param string $comments
      * @return Pickup
      */
-    public function setComments(string $comments)
+    public function setComments(string $comments): Pickup
     {
         $this->comments = $comments;
         return $this;
@@ -200,7 +200,7 @@ class Pickup implements Normalize
      * @param string $reference1
      * @return Pickup
      */
-    public function setReference1(string $reference1)
+    public function setReference1(string $reference1): Pickup
     {
         $this->reference1 = $reference1;
         return $this;
@@ -220,7 +220,7 @@ class Pickup implements Normalize
      * @param string $reference2
      * @return Pickup
      */
-    public function setReference2(string $reference2)
+    public function setReference2(string $reference2): Pickup
     {
         $this->reference2 = $reference2;
         return $this;
@@ -258,7 +258,7 @@ class Pickup implements Normalize
      * @param Shipment[] $shipments
      * @return Pickup
      */
-    public function setShipments(array $shipments)
+    public function setShipments(array $shipments): Pickup
     {
         $this->shipments = $shipments;
         return $this;
@@ -286,7 +286,7 @@ class Pickup implements Normalize
      * @param PickupItem[] $pickItems
      * @return Pickup
      */
-    public function setPickItems(array $pickItems)
+    public function setPickItems(array $pickItems): Pickup
     {
         $this->pickItems = $pickItems;
         return $this;

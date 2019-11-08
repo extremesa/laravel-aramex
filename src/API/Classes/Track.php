@@ -27,9 +27,9 @@ class Track
 
     /**
      * @param string $id
-     * @return $this
+     * @return Track
      */
-    public function setId(string $id)
+    public function setId(string $id): Track
     {
         $this->id = $id;
         return $this;
@@ -45,9 +45,9 @@ class Track
 
     /**
      * @param string $updateCode
-     * @return $this
+     * @return Track
      */
-    public function setUpdateCode(string $updateCode)
+    public function setUpdateCode(string $updateCode): Track
     {
         $this->updateCode = $updateCode;
         return $this;
@@ -63,9 +63,9 @@ class Track
 
     /**
      * @param string $updateDescription
-     * @return $this
+     * @return Track
      */
-    public function setUpdateDescription(string $updateDescription)
+    public function setUpdateDescription(string $updateDescription): Track
     {
         $this->updateDescription = $updateDescription;
         return $this;
@@ -81,9 +81,9 @@ class Track
 
     /**
      * @param string $updateDateTime
-     * @return $this
+     * @return Track
      */
-    public function setUpdateDateTime(string $updateDateTime)
+    public function setUpdateDateTime(string $updateDateTime): Track
     {
         $this->updateDateTime = $updateDateTime;
         return $this;
@@ -99,9 +99,9 @@ class Track
 
     /**
      * @param string $updateLocation
-     * @return $this
+     * @return Track
      */
-    public function setUpdateLocation(string $updateLocation)
+    public function setUpdateLocation(string $updateLocation): Track
     {
         $this->updateLocation = $updateLocation;
         return $this;
@@ -117,9 +117,9 @@ class Track
 
     /**
      * @param string $comments
-     * @return $this
+     * @return Track
      */
-    public function setComments(string $comments)
+    public function setComments(string $comments): Track
     {
         $this->comments = $comments;
         return $this;
@@ -135,9 +135,9 @@ class Track
 
     /**
      * @param string $problemCode
-     * @return $this
+     * @return Track
      */
-    public function setProblemCode(string $problemCode)
+    public function setProblemCode(string $problemCode): Track
     {
         $this->problemCode = $problemCode;
         return $this;
@@ -153,9 +153,9 @@ class Track
 
     /**
      * @param string $grossWeight
-     * @return $this
+     * @return Track
      */
-    public function setGrossWeight(string $grossWeight)
+    public function setGrossWeight(string $grossWeight): Track
     {
         $this->grossWeight = $grossWeight;
         return $this;
@@ -171,9 +171,9 @@ class Track
 
     /**
      * @param string $chargeableWeight
-     * @return $this
+     * @return Track
      */
-    public function setChargeableWeight(string $chargeableWeight)
+    public function setChargeableWeight(string $chargeableWeight): Track
     {
         $this->chargeableWeight = $chargeableWeight;
         return $this;
@@ -189,9 +189,9 @@ class Track
 
     /**
      * @param string $weightUnit
-     * @return $this
+     * @return Track
      */
-    public function setWeightUnit(string $weightUnit)
+    public function setWeightUnit(string $weightUnit): Track
     {
         $this->weightUnit = $weightUnit;
         return $this;

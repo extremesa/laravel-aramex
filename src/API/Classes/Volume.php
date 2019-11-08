@@ -29,9 +29,9 @@ class Volume implements Normalize
      * Options: Cm3, Inch3
      *
      * @param string $unit
-     * @return $this
+     * @return Volume
      */
-    public function setUnit(string $unit)
+    public function setUnit(string $unit): Volume
     {
         $this->unit = $unit;
         return $this;
@@ -49,9 +49,9 @@ class Volume implements Normalize
      * Shipment Volume
      *
      * @param float $value
-     * @return $this
+     * @return Volume
      */
-    public function setValue(float $value)
+    public function setValue(float $value): Volume
     {
         $this->value = $value;
         return $this;
@@ -61,7 +61,7 @@ class Volume implements Normalize
      * Centimeters
      * @return Volume
      */
-    public function useCentimetersAsUnit()
+    public function useCentimetersAsUnit(): Volume
     {
         return $this->setUnit('Cm3');
     }
@@ -70,7 +70,7 @@ class Volume implements Normalize
      * Inches
      * @return Volume
      */
-    public function useInchesAsUnit()
+    public function useInchesAsUnit(): Volume
     {
         return $this->setUnit('Inch3');
     }

@@ -26,6 +26,7 @@ class State implements Normalize
 
     /**
      * @param string|null $code
+     * @return State
      */
     public function setCode(string $code): State
     {
@@ -43,6 +44,7 @@ class State implements Normalize
 
     /**
      * @param string|null $name
+     * @return State
      */
     public function setName(string $name): State
     {

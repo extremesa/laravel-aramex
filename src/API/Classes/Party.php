@@ -75,7 +75,7 @@ class Party implements Normalize
      * @param string $accountNumber
      * @return $this
      */
-    public function setAccountNumber(string $accountNumber)
+    public function setAccountNumber(string $accountNumber): Party
     {
         $this->accountNumber = $accountNumber;
         return $this;
@@ -116,7 +116,7 @@ class Party implements Normalize
      * @param Contact $contact
      * @return Party
      */
-    public function setContact(Contact $contact)
+    public function setContact(Contact $contact): Party
     {
         $this->contact = $contact;
         return $this;

@@ -31,6 +31,7 @@ class Country implements Normalize
 
     /**
      * @param string|null $code
+     * @return Country
      */
     public function setCode(string $code): Country
     {
@@ -48,6 +49,7 @@ class Country implements Normalize
 
     /**
      * @param string|null $name
+     * @return Country
      */
     public function setName(string $name): Country
     {
@@ -65,6 +67,7 @@ class Country implements Normalize
 
     /**
      * @param string|null $isoCode
+     * @return Country
      */
     public function setIsoCode(string $isoCode): Country
     {
@@ -82,6 +85,7 @@ class Country implements Normalize
 
     /**
      * @param bool $stateRequired
+     * @return Country
      */
     public function setStateRequired(bool $stateRequired): Country
     {
@@ -99,6 +103,7 @@ class Country implements Normalize
 
     /**
      * @param bool $postCodeRequired
+     * @return Country
      */
     public function setPostCodeRequired(bool $postCodeRequired): Country
     {
@@ -117,6 +122,7 @@ class Country implements Normalize
     /**
      * @param array $postCodeRegex
      * todo
+     * @return Country
      */
     public function setPostCodeRegex(array $postCodeRegex): Country
     {
@@ -134,6 +140,7 @@ class Country implements Normalize
 
     /**
      * @param string|null $internationalCallingNumber
+     * @return Country
      */
     public function setInternationalCallingNumber(string $internationalCallingNumber): Country
     {
