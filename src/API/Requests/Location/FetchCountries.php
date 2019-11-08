@@ -6,6 +6,12 @@ use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Location\CountriesFetchingResponse;
 
+/**
+ * This method allows users to get the world countries list.
+ *
+ * Class FetchCountries
+ * @package ExtremeSa\Aramex\API\Requests\Location
+ */
 class FetchCountries extends API implements Normalize
 {
     protected $live_wsdl = 'https://ws.aramex.net/shippingapi.v2/location/service_1_0.svc?wsdl';
