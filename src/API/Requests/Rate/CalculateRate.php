@@ -22,7 +22,9 @@ class CalculateRate extends API implements Normalize
 
     public function __construct()
     {
-        parent::__construct('live');
+        $this->useLiveAsEnvironment();
+
+        parent::__construct();
     }
 
     /**
