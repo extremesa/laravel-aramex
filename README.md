@@ -6,28 +6,28 @@ This repo is a full rebuild of DigitalCloud/aramex.
 
 ## Table of Contents
 
-* Installation
-* QuickStart
-    * Location
-        * Fetch Countries
-        * Fetch Country
-        * Fetch States
-        * Fetch Cities
-        * Validate Address
-    * Rate
-        * Calculate Rate
-    * Shipping
-        * Create Pickup
-        * Cancel Pickup
-        * Create Shipments
-        * Get Last Shipments Numbers Range
-        * Print Label
-        * Reserve Shipment Number Range
-        * Schedule Delivery
-    * Tracking
-        * Track Pickup
-        * Track Shipments
-* Credits
+* [Installation](#installation)
+* [QuickStart](#quickstart)
+    * [Location](#location)
+        * [Fetch Countries](#fetch-countries)
+        * [Fetch Country](#fetch-country)
+        * [Fetch States](#fetch-states)
+        * [Fetch Cities](#fetch-cities)
+        * [Validate Address](#validate-address)
+    * [Rate](#rate)
+        * [Calculate Rate](#calculate-rate)
+    * [Shipping](#shipping)
+        * [Create Pickup](#create-pickup)
+        * [Cancel Pickup](#cancel-Pickup)
+        * [Create Shipments](#create-shipments)
+        * [Get Last Shipments Numbers Range](#get-last-shipments-numbers-range)
+        * [Print Label](#print-label)
+        * [Reserve Shipment Number Range](#reserve-shipment-number-range)
+        * [Schedule Delivery](#schedule-delivery)
+    * [Tracking](#tracking)
+        * [Track Pickup](#track-pickup)
+        * [Track Shipments](#track-shipments)
+* [Credits](#credits)
 
 ## Installation
 
