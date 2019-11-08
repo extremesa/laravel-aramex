@@ -23,7 +23,10 @@
         "laravel": {
             "providers": [
                 "ExtremeSa\\Aramex\\AramexServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "Aramex": "ExtremeSa\\Aramex\\Facades\\Aramex"
+            }
         }
     },
     "config": {

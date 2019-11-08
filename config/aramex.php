@@ -11,6 +11,7 @@ return [
         'username' => '',
         'password' => ''
     ],
+
     'live' => [
         'country_code' => env('ARAMEX_COUNTRY_CODE'),
         'entity' => env('ARAMEX_ENTITY'),

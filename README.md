@@ -1,6 +1,6 @@
 # Laravel Aramex
 
-Adds Aramex Functionality to Laravel.
+Adds Aramex Functionality to your Laravel project.
 
 This repo is a full rebuild of DigitalCloud/aramex.
 
@@ -34,6 +34,14 @@ This repo is a full rebuild of DigitalCloud/aramex.
 Run the following command to install the latest applicable version of the package: 
     
     composer require extremesa/aramex
+
+You can publish the config-file with:
+
+    php artisan vendor:publish --provider="ExtremeSa\Aramex\AramexServiceProvider" --tag="config"
+
+You can publish the resources files with:
+
+    php artisan vendor:publish --provider="ExtremeSa\Aramex\AramexServiceProvider" --tag="lang"
 
 ## QuickStart
 

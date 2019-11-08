@@ -15,14 +15,17 @@ class AramexServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../config/aramex.php' => config_path('aramex.php'),
-        ], 'ExtremeSa-aramex');
+        ], 'config');
 
         $this->publishes([
             __DIR__ . '/../resources/lang' => resource_path('lang/vendor/aramex'),
-        ], 'ExtremeSa-aramex');
+        ], 'lang');
     }
 
     public function register()
     {
+        $this->app->singleton(Aramex::class, function () {
+            return new Aramex($this->app);
+        });
     }
 }
