@@ -24,6 +24,7 @@ class PickupCancellationResponse extends Response
 
     /**
      * @param string $message
+     * @return PickupCancellationResponse
      */
     public function setMessage(string $message): PickupCancellationResponse
     {
@@ -35,7 +36,7 @@ class PickupCancellationResponse extends Response
      * @param object $obj
      * @return self
      */
-    protected function parse($obj)
+    protected function parse($obj): PickupCancellationResponse
     {
         parent::parse($obj);
 

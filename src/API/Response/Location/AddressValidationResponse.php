@@ -26,6 +26,7 @@ class AddressValidationResponse extends Response
 
     /**
      * @param Address[] $suggestedAddresses
+     * @return AddressValidationResponse
      */
     public function setSuggestedAddresses(array $suggestedAddresses): AddressValidationResponse
     {
@@ -35,6 +36,7 @@ class AddressValidationResponse extends Response
 
     /**
      * @param Address $suggestedAddresses
+     * @return AddressValidationResponse
      */
     public function addSuggestedAddresses(Address $suggestedAddress): AddressValidationResponse
     {
@@ -58,7 +60,7 @@ class AddressValidationResponse extends Response
 
     /**
      * @param object $obj
-     * @return RateResponse
+     * @return AddressValidationResponse
      */
     public static function make($obj)
     {

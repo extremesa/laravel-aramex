@@ -2,10 +2,10 @@
 
 namespace ExtremeSa\Aramex\API\Requests\Location;
 
+use Exception;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Location\CountryFetchingResponse;
-use Exception;
 
 class FetchCountry extends API implements Normalize
 {
@@ -16,6 +16,7 @@ class FetchCountry extends API implements Normalize
 
     /**
      * @return CountryFetchingResponse
+     * @throws Exception
      */
     public function fetch()
     {
@@ -43,6 +44,7 @@ class FetchCountry extends API implements Normalize
 
     /**
      * @param string $code
+     * @return FetchCountry
      */
     public function setCode(string $code): FetchCountry
     {

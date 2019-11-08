@@ -2,12 +2,12 @@
 
 namespace ExtremeSa\Aramex\API\Requests\Shipping;
 
+use Exception;
 use ExtremeSa\Aramex\API\Classes\LabelInfo;
 use ExtremeSa\Aramex\API\Classes\Shipment;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Shipping\ShipmentCreationResponse;
-use Exception;
 
 /**
  * This method allows users to create shipments on Aramex’s system.
@@ -54,9 +54,9 @@ class CreateShipments extends API implements Normalize
 
     /**
      * @param Shipment[] $shipments
-     * @return $this
+     * @return CreateShipments
      */
-    public function setShipments(array $shipments)
+    public function setShipments(array $shipments): CreateShipments
     {
         $this->shipments = $shipments;
         return $this;
@@ -64,9 +64,9 @@ class CreateShipments extends API implements Normalize
 
     /**
      * @param Shipment $shipment
-     * @return $this
+     * @return CreateShipments
      */
-    public function addShipment(Shipment $shipment)
+    public function addShipment(Shipment $shipment): CreateShipments
     {
         $this->shipments[] = $shipment;
         return $this;
@@ -82,9 +82,9 @@ class CreateShipments extends API implements Normalize
 
     /**
      * @param LabelInfo $labelInfo
-     * @return $this
+     * @return CreateShipments
      */
-    public function setLabelInfo(LabelInfo $labelInfo)
+    public function setLabelInfo(LabelInfo $labelInfo): CreateShipments
     {
         $this->labelInfo = $labelInfo;
         return $this;

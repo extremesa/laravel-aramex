@@ -26,9 +26,9 @@ class DropOffLocationsFetchingResponse extends Response
 
     /**
      * @param Office[] $offices
-     * @return $this
+     * @return DropOffLocationsFetchingResponse
      */
-    public function setOffices(array $offices): OfficesFetchingResponse
+    public function setOffices(array $offices): DropOffLocationsFetchingResponse
     {
         $this->offices = $offices;
         return $this;
@@ -36,9 +36,9 @@ class DropOffLocationsFetchingResponse extends Response
 
     /**
      * @param Office $office
-     * @return $this
+     * @return DropOffLocationsFetchingResponse
      */
-    public function addOffice(Office $office): OfficesFetchingResponse
+    public function addOffice(Office $office): DropOffLocationsFetchingResponse
     {
         $this->offices[] = $office;
         return $this;
@@ -57,12 +57,6 @@ class DropOffLocationsFetchingResponse extends Response
             foreach ($obj->Locations->DropOffLocation as $office) {
                 $this->addOffice(
                     (new Office())
-                        ->setCode($office->ID)
-                        ->setName($office->Description)
-                        ->setIsoCode($office->Address)
-                        ->setStateRequired($office->Telephone)
-                        ->setPostCodeRequired($office->WorkingDays)
-                        ->setInternationalCallingNumber($office->WorkingHours)
                 );
             }
         }
@@ -72,7 +66,7 @@ class DropOffLocationsFetchingResponse extends Response
 
     /**
      * @param object $obj
-     * @return RateResponse
+     * @return DropOffLocationsFetchingResponse
      */
     public static function make($obj)
     {

@@ -22,13 +22,13 @@ class ValidateAddress extends API implements Normalize
     private $address;
 
     /**
-     * @return ValidateAddress
+     * @return AddressValidationResponse
+     * @throws \Exception
      */
     public function check()
     {
         $this->validate();
 
-        dd($this->soapClient->ValidateAddress($this->normalize()));
         return AddressValidationResponse::make($this->soapClient->ValidateAddress($this->normalize()));
     }
 
@@ -52,6 +52,7 @@ class ValidateAddress extends API implements Normalize
 
     /**
      * @param Address $address
+     * @return ValidateAddress
      */
     public function setAddress(Address $address): ValidateAddress
     {

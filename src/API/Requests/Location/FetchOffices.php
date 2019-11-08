@@ -2,10 +2,10 @@
 
 namespace ExtremeSa\Aramex\API\Requests\Location;
 
+use Exception;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Location\OfficesFetchingResponse;
-use Exception;
 
 /**
  * This method allows users to get list of the available ARAMEX offices within a certain country.
@@ -23,6 +23,7 @@ class FetchOffices extends API implements Normalize
 
     /**
      * @return OfficesFetchingResponse
+     * @throws Exception
      */
     public function fetch()
     {
@@ -50,6 +51,7 @@ class FetchOffices extends API implements Normalize
 
     /**
      * @param string $countryCode
+     * @return FetchOffices
      */
     public function setCountryCode(string $countryCode): FetchOffices
     {

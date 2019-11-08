@@ -2,10 +2,10 @@
 
 namespace ExtremeSa\Aramex\API\Requests\Shipping;
 
+use Exception;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Shipping\LastReservedShipmentNumberRangeResponse;
-use Exception;
 
 /**
  * This method allows you to inquire about the last reserved range using a specific entity and product group
@@ -28,8 +28,6 @@ class GetLastShipmentsNumbersRange extends API implements Normalize
     public function create(): LastReservedShipmentNumberRangeResponse
     {
         $this->validate();
-
-        dd($this->soapClient->GetLastShipmentsNumbersRange($this->normalize()));
 
         return LastReservedShipmentNumberRangeResponse::make($this->soapClient->GetLastShipmentsNumbersRange($this->normalize()));
     }
@@ -60,7 +58,7 @@ class GetLastShipmentsNumbersRange extends API implements Normalize
 
     /**
      * @param string $entity
-     * @return LastReserveShipmentNumberRange
+     * @return GetLastShipmentsNumbersRange
      */
     public function setEntity(string $entity): GetLastShipmentsNumbersRange
     {
@@ -79,7 +77,7 @@ class GetLastShipmentsNumbersRange extends API implements Normalize
 
     /**
      * @param string $productGroup
-     * @return LastReserveShipmentNumberRange
+     * @return GetLastShipmentsNumbersRange
      */
     public function setProductGroup(string $productGroup): GetLastShipmentsNumbersRange
     {

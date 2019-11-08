@@ -10,7 +10,7 @@ class CountriesFetchingResponse extends Response
     private $countries;
 
     /**
-     * @return Country
+     * @return Country[]
      */
     public function getCountries(): array
     {
@@ -64,7 +64,7 @@ class CountriesFetchingResponse extends Response
 
     /**
      * @param object $obj
-     * @return RateResponse
+     * @return CountriesFetchingResponse
      */
     public static function make($obj)
     {

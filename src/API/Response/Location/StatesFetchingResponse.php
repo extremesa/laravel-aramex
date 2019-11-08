@@ -62,7 +62,7 @@ class StatesFetchingResponse extends Response
 
     /**
      * @param object $obj
-     * @return RateResponse
+     * @return StatesFetchingResponse
      */
     public static function make($obj)
     {

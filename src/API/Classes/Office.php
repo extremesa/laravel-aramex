@@ -33,6 +33,7 @@ class Office implements Normalize
 
     /**
      * @param string $entity
+     * @return Office
      */
     public function setEntity(string $entity): Office
     {
@@ -50,6 +51,7 @@ class Office implements Normalize
 
     /**
      * @param string $entityDescription
+     * @return Office
      */
     public function setEntityDescription(string $entityDescription): Office
     {
@@ -67,6 +69,7 @@ class Office implements Normalize
 
     /**
      * @param string $officeType
+     * @return Office
      */
     public function setOfficeType(string $officeType): Office
     {
@@ -84,6 +87,7 @@ class Office implements Normalize
 
     /**
      * @param Address $address
+     * @return Office
      */
     public function setAddress(Address $address): Office
     {
@@ -101,6 +105,7 @@ class Office implements Normalize
 
     /**
      * @param string|null $telephone
+     * @return Office
      */
     public function setTelephone(?string $telephone): Office
     {
@@ -118,6 +123,7 @@ class Office implements Normalize
 
     /**
      * @param string $workingDays
+     * @return Office
      */
     public function setWorkingDays(string $workingDays): Office
     {
@@ -135,6 +141,7 @@ class Office implements Normalize
 
     /**
      * @param string $workingHours
+     * @return Office
      */
     public function setWorkingHours(string $workingHours): Office
     {
@@ -152,6 +159,7 @@ class Office implements Normalize
 
     /**
      * @param mixed $longtitude
+     * @return Office
      */
     public function setLongtitude(float $longtitude): Office
     {
@@ -169,6 +177,7 @@ class Office implements Normalize
 
     /**
      * @param float $latitude
+     * @return Office
      */
     public function setLatitude(float $latitude): Office
     {

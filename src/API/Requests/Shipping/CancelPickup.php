@@ -2,10 +2,10 @@
 
 namespace ExtremeSa\Aramex\API\Requests\Shipping;
 
+use Exception;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Shipping\PickupCancellationResponse;
-use Exception;
 
 /**
  * This method allows you to cancel a pickup as long as it is un-assigned or pending details.

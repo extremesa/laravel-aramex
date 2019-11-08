@@ -2,12 +2,12 @@
 
 namespace ExtremeSa\Aramex\API\Requests\Shipping;
 
+use Exception;
 use ExtremeSa\Aramex\API\Classes\LabelInfo;
 use ExtremeSa\Aramex\API\Classes\Pickup;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Shipping\PickupCreationResponse;
-use Exception;
 
 /**
  * This method allows users to create a pickup request.
@@ -45,9 +45,9 @@ class CreatePickup extends API implements Normalize
 
     /**
      * @param Pickup $pickup
-     * @return $this
+     * @return CreatePickup
      */
-    public function setPickup(Pickup $pickup)
+    public function setPickup(Pickup $pickup): CreatePickup
     {
         $this->pickup = $pickup;
         return $this;
@@ -63,9 +63,9 @@ class CreatePickup extends API implements Normalize
 
     /**
      * @param LabelInfo $labelInfo
-     * @return $this
+     * @return CreatePickup
      */
-    public function setLabelInfo(LabelInfo $labelInfo)
+    public function setLabelInfo(LabelInfo $labelInfo): CreatePickup
     {
         $this->labelInfo = $labelInfo;
         return $this;

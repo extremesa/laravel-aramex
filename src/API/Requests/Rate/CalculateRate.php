@@ -3,6 +3,7 @@
 
 namespace ExtremeSa\Aramex\API\Requests\Rate;
 
+use Exception;
 use ExtremeSa\Aramex\API\Classes\Address;
 use ExtremeSa\Aramex\API\Classes\ShipmentDetails;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
@@ -20,7 +21,8 @@ class CalculateRate extends API implements Normalize
     protected $test_wsdl = 'https://ws.aramex.net/ShippingAPI.V2/RateCalculator/Service_1_0.svc?wsdl';
 
     /**
-     * @return RateResponse
+     * @return RateCalculatorResponse
+     * @throws Exception
      */
     public function calculate()
     {
@@ -34,15 +36,15 @@ class CalculateRate extends API implements Normalize
         Parent::validate();
 
         if (!$this->originalAddress) {
-            throw new \Exception('Origin Address not provided');
+            throw new Exception('Origin Address not provided');
         }
 
         if (!$this->destinationAddress) {
-            throw new \Exception('Destination Address not provided');
+            throw new Exception('Destination Address not provided');
         }
 
         if (!$this->shipmentDetails) {
-            throw new \Exception('Shipment Details not provided');
+            throw new Exception('Shipment Details not provided');
         }
     }
 

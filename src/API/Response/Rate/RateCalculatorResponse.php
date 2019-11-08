@@ -42,7 +42,7 @@ class RateCalculatorResponse extends Response
 
     /**
      * @param object $obj
-     * @return RateResponse
+     * @return RateCalculatorResponse
      */
     public static function make($obj)
     {

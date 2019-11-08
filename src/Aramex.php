@@ -100,7 +100,7 @@ class Aramex
         return new ScheduleDelivery();
     }
 
-    // Traching
+    // Tracking
     public static function TrackPickup()
     {
         return new TrackPickup();

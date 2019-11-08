@@ -56,7 +56,7 @@ class CitiesFetchingResponse extends Response
 
     /**
      * @param object $obj
-     * @return RateResponse
+     * @return CitiesFetchingResponse
      */
     public static function make($obj)
     {

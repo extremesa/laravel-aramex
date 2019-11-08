@@ -54,7 +54,7 @@ class ShipmentTrackingResponse extends Response
 
     /**
      * @param object $obj
-     * @return RateResponse
+     * @return ShipmentTrackingResponse
      */
     public static function make($obj)
     {

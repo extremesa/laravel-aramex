@@ -2,8 +2,10 @@
 
 namespace ExtremeSa\Aramex\API\Requests\Tracking;
 
+use Exception;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
+use ExtremeSa\Aramex\API\Response\Tracking\RateResponse;
 use ExtremeSa\Aramex\API\Response\Tracking\ShipmentTrackingResponse;
 
 /**
@@ -20,6 +22,10 @@ class TrackShipments extends API implements Normalize
     private $shipments;
     private $getLastTrackingUpdateOnly;
 
+    /**
+     * @return ShipmentTrackingResponse
+     * @throws Exception
+     */
     public function track()
     {
         $this->validate();
@@ -32,7 +38,7 @@ class TrackShipments extends API implements Normalize
         parent::validate();
 
         if (!$this->shipments) {
-            throw new \Exception('Shipments are not provided');
+            throw new Exception('Shipments are not provided');
         }
     }
 
