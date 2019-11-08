@@ -189,7 +189,15 @@ class Office implements Normalize
     public function normalize(): array
     {
         return [
-            'Code' => $this->getCode(),
+            'Entity' => $this->getEntity(),
+            'EntityDescription' => $this->getEntityDescription(),
+            'OfficeType' => $this->getOfficeType(),
+            'Address' => $this->getAddress()->normalize(),
+            'Telephone' => $this->getTelephone(),
+            'WorkingDays' => $this->getWorkingDays(),
+            'WorkingHours' => $this->getWorkingHours(),
+            'Longtitude' => $this->getLongtitude(),
+            'Latitude' => $this->getLatitude(),
         ];
     }
 }

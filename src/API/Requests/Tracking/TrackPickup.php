@@ -6,8 +6,13 @@ use Exception;
 use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Tracking\PickupTrackingResponse;
-use ExtremeSa\Aramex\API\Response\Tracking\RateResponse;
 
+/**
+ * This method allows the user to track an existing pickup’s updates and latest status.
+ *
+ * Class TrackPickup
+ * @package ExtremeSa\Aramex\API\Requests\Tracking
+ */
 class TrackPickup extends API implements Normalize
 {
     protected $live_wsdl = 'https://ws.aramex.net/ShippingAPI.V2/tracking/Service_1_0.svc?wsdl';
@@ -21,7 +26,7 @@ class TrackPickup extends API implements Normalize
      * @return PickupTrackingResponse
      * @throws Exception
      */
-    public function make()
+    public function run()
     {
         $this->validate();
 

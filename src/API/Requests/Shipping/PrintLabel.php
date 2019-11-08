@@ -31,7 +31,7 @@ class PrintLabel extends API implements Normalize
      * @return LabelPrintingResponse
      * @throws Exception
      */
-    public function make(): LabelPrintingResponse
+    public function run(): LabelPrintingResponse
     {
         $this->validate();
 

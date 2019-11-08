@@ -20,15 +20,13 @@ abstract class API implements Normalize
     protected $live_wsdl;
     protected $environment;
 
-    public function __construct($environment = null)
+    public function __construct()
     {
-        if ($environment) {
-            $this->setEnvironment($environment);
+        if ($this->environment) {
+            $this->setEnvironment($this->environment);
         } else {
             config('aramex.mode') === 'live' ? $this->useLiveAsEnvironment() : $this->useTestAsEnvironment();
         }
-
-        dd($this->environment);
 
         $this->fillClientInfoFromEnv();
 

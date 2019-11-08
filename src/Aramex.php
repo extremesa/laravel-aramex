@@ -23,90 +23,90 @@ use ExtremeSa\Aramex\API\Requests\Tracking\TrackShipments;
 class Aramex
 {
     // Location
-    public static function FetchCities()
+    public static function fetchCities()
     {
         return new FetchCities();
     }
 
-    public static function FetchCountries()
+    public static function fetchCountries()
     {
         return new FetchCountries();
     }
 
-    public static function FetchCountry()
+    public static function fetchCountry()
     {
         return new FetchCountry();
     }
 
-    public static function FetchDropOffLocations()
+    public static function fetchDropOffLocations()
     {
         return new FetchDropOffLocations();
     }
 
-    public static function FetchOffices()
+    public static function fetchOffices()
     {
         return new FetchOffices();
     }
 
-    public static function FetchStates()
+    public static function fetchStates()
     {
         return new FetchStates();
     }
 
-    public static function ValidateAddress()
+    public static function validateAddress()
     {
         return new ValidateAddress();
     }
 
     // Rate
-    public static function CalculateRate()
+    public static function calculateRate()
     {
         return new CalculateRate();
     }
 
     // Shipping
-    public static function CancelPickup()
+    public static function cancelPickup()
     {
         return new CancelPickup();
     }
 
-    public static function CreatePickup()
+    public static function createPickup()
     {
         return new CreatePickup();
     }
 
-    public static function CreateShipments()
+    public static function createShipments()
     {
         return new CreateShipments();
     }
 
-    public static function GetLastShipmentsNumbersRange()
+    public static function getLastShipmentsNumbersRange()
     {
         return new GetLastShipmentsNumbersRange();
     }
 
-    public static function PrintLabel()
+    public static function printLabel()
     {
         return new PrintLabel();
     }
 
-    public static function ReserveShipmentNumberRange()
+    public static function reserveShipmentNumberRange()
     {
         return new ReserveShipmentNumberRange();
     }
 
-    public static function ScheduleDelivery()
+    public static function scheduleDelivery()
     {
         return new ScheduleDelivery();
     }
 
     // Tracking
-    public static function TrackPickup()
+    public static function trackPickup()
     {
         return new TrackPickup();
     }
 
-    public static function TrackShipments()
+    public static function trackShipments()
     {
         return new TrackShipments();
     }

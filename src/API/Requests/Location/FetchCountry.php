@@ -7,6 +7,12 @@ use ExtremeSa\Aramex\API\Interfaces\Normalize;
 use ExtremeSa\Aramex\API\Requests\API;
 use ExtremeSa\Aramex\API\Response\Location\CountryFetchingResponse;
 
+/**
+ * This method allows users to get details of a certain country.
+ *
+ * Class FetchCountry
+ * @package ExtremeSa\Aramex\API\Requests\Location
+ */
 class FetchCountry extends API implements Normalize
 {
     protected $live_wsdl = 'https://ws.aramex.net/shippingapi.v2/location/service_1_0.svc?wsdl';
@@ -18,7 +24,7 @@ class FetchCountry extends API implements Normalize
      * @return CountryFetchingResponse
      * @throws Exception
      */
-    public function make()
+    public function run()
     {
         $this->validate();
 

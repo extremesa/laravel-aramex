@@ -46,7 +46,7 @@ class Shipment implements Normalize
      * @param string $reference1
      * @return $this
      */
-    public function setReference1(string $reference1)
+    public function setReference1(string $reference1): Shipment
     {
         $this->reference1 = $reference1;
         return $this;
@@ -66,7 +66,7 @@ class Shipment implements Normalize
      * @param string $reference2
      * @return $this
      */
-    public function setReference2(string $reference2)
+    public function setReference2(string $reference2): Shipment
     {
         $this->reference2 = $reference2;
         return $this;
@@ -86,7 +86,7 @@ class Shipment implements Normalize
      * @param string $reference3
      * @return $this
      */
-    public function setReference3(string $reference3)
+    public function setReference3(string $reference3): Shipment
     {
         $this->reference3 = $reference3;
         return $this;
@@ -104,7 +104,7 @@ class Shipment implements Normalize
      * @param Party $shipper
      * @return $this
      */
-    public function setShipper(Party $shipper)
+    public function setShipper(Party $shipper): Shipment
     {
         $this->shipper = $shipper;
         return $this;
@@ -122,7 +122,7 @@ class Shipment implements Normalize
      * @param Party $consignee
      * @return $this
      */
-    public function setConsignee(Party $consignee)
+    public function setConsignee(Party $consignee): Shipment
     {
         $this->consignee = $consignee;
         return $this;
@@ -140,7 +140,7 @@ class Shipment implements Normalize
      * @param Party $thirdParty
      * @return $this
      */
-    public function setThirdParty(Party $thirdParty)
+    public function setThirdParty(Party $thirdParty): Shipment
     {
         $this->thirdParty = $thirdParty;
         return $this;
@@ -160,7 +160,7 @@ class Shipment implements Normalize
      * @param int $shippingDateTime
      * @return $this
      */
-    public function setShippingDateTime(int $shippingDateTime)
+    public function setShippingDateTime(int $shippingDateTime): Shipment
     {
         $this->shippingDateTime = $shippingDateTime;
         return $this;
@@ -180,7 +180,7 @@ class Shipment implements Normalize
      * @param int $dueDate
      * @return $this
      */
-    public function setDueDate(int $dueDate)
+    public function setDueDate(int $dueDate): Shipment
     {
         $this->dueDate = $dueDate;
         return $this;
@@ -200,7 +200,7 @@ class Shipment implements Normalize
      * @param string $comments
      * @return $this
      */
-    public function setComments(string $comments)
+    public function setComments(string $comments): Shipment
     {
         $this->comments = $comments;
         return $this;
@@ -220,7 +220,7 @@ class Shipment implements Normalize
      * @param string $pickupLocation
      * @return $this
      */
-    public function setPickupLocation(string $pickupLocation)
+    public function setPickupLocation(string $pickupLocation): Shipment
     {
         $this->pickupLocation = $pickupLocation;
         return $this;
@@ -240,7 +240,7 @@ class Shipment implements Normalize
      * @param string $operationsInstructions
      * @return $this
      */
-    public function setOperationsInstructions(string $operationsInstructions)
+    public function setOperationsInstructions(string $operationsInstructions): Shipment
     {
         $this->operationsInstructions = $operationsInstructions;
         return $this;
@@ -260,7 +260,7 @@ class Shipment implements Normalize
      * @param string $accountingInstructions
      * @return $this
      */
-    public function setAccountingInstructions(string $accountingInstructions)
+    public function setAccountingInstructions(string $accountingInstructions): Shipment
     {
         $this->accountingInstructions = $accountingInstructions;
         return $this;
@@ -278,7 +278,7 @@ class Shipment implements Normalize
      * @param ShipmentDetails $details
      * @return $this
      */
-    public function setDetails(ShipmentDetails $details)
+    public function setDetails(ShipmentDetails $details): Shipment
     {
         $this->details = $details;
         return $this;
@@ -297,7 +297,7 @@ class Shipment implements Normalize
      * @param array $attachments
      * @return $this
      */
-    public function setAttachments(array $attachments)
+    public function setAttachments(array $attachments): Shipment
     {
         $this->attachments = $attachments;
         return $this;
@@ -307,7 +307,7 @@ class Shipment implements Normalize
      * @param Attachment $attachment
      * @return $this
      */
-    public function addAttachment(Attachment $attachment)
+    public function addAttachment(Attachment $attachment): Shipment
     {
         $this->attachments[] = $attachment;
         return $this;
@@ -327,7 +327,7 @@ class Shipment implements Normalize
      * @param string $foreignHAWB
      * @return $this
      */
-    public function setForeignHAWB(string $foreignHAWB)
+    public function setForeignHAWB(string $foreignHAWB): Shipment
     {
         $this->foreignHAWB = $foreignHAWB;
         return $this;
@@ -347,7 +347,7 @@ class Shipment implements Normalize
      * @param int $transportType
      * @return $this
      */
-    public function setTransportType(int $transportType)
+    public function setTransportType(int $transportType): Shipment
     {
         $this->transportType = $transportType;
         return $this;
@@ -370,7 +370,7 @@ class Shipment implements Normalize
      * @param string $number
      * @return $this
      */
-    public function setNumber(string $number)
+    public function setNumber(string $number): Shipment
     {
         $this->number = $number;
         return $this;
@@ -392,7 +392,7 @@ class Shipment implements Normalize
      * @param string $pickupGUID
      * @return $this
      */
-    public function setPickupGUID(string $pickupGUID)
+    public function setPickupGUID(string $pickupGUID): Shipment
     {
         $this->pickupGUID = $pickupGUID;
         return $this;

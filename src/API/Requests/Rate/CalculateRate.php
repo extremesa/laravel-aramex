@@ -22,14 +22,16 @@ class CalculateRate extends API implements Normalize
 
     public function __construct()
     {
-        parent::__construct('live');
+        $this->useLiveAsEnvironment();
+
+        parent::__construct();
     }
 
     /**
      * @return RateCalculatorResponse
      * @throws Exception
      */
-    public function make()
+    public function run()
     {
         $this->validate();
 

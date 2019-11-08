@@ -32,7 +32,7 @@ class TrackingResult
     }
 
     /**
-     * @param string $id
+     * @param string $waybillNumber
      * @return TrackingResult
      */
     public function setWaybillNumber(string $waybillNumber): TrackingResult

@@ -18,7 +18,7 @@ class FetchStates extends API implements Normalize
      * @return StatesFetchingResponse
      * @throws Exception
      */
-    public function make()
+    public function run()
     {
         $this->validate();
 

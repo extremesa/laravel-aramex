@@ -29,7 +29,7 @@ class Money implements Normalize
      * @param string $currencyCode
      * @return $this
      */
-    public function setCurrencyCode(string $currencyCode)
+    public function setCurrencyCode(string $currencyCode): Money
     {
         $this->currencyCode = $currencyCode;
         return $this;
@@ -39,9 +39,10 @@ class Money implements Normalize
      * United States Dollar
      * @return Money
      */
-    public function useUnitedStatesDollarAsCurrency()
+    public function useUnitedStatesDollarAsCurrency(): Money
     {
-        return $this->setCurrencyCode('USD');
+        $this->setCurrencyCode('USD');
+        return $this;
     }
 
     /**
@@ -55,9 +56,9 @@ class Money implements Normalize
     /**
      * The Monetary value.
      * @param float $value
-     * @return $this
+     * @return Money
      */
-    public function setValue(float $value)
+    public function setValue(float $value): Money
     {
         $this->value = $value;
         return $this;

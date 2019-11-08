@@ -29,9 +29,9 @@ class Dimension implements Normalize
     /**
      * Measurements required in calculating the Chargeable Weight, If any of the Dimensional values are filled then the rest must be filled.
      * @param float $length
-     * @return $this
+     * @return Dimension
      */
-    public function setLength(float $length)
+    public function setLength(float $length): Dimension
     {
         $this->length = $length;
         return $this;
@@ -48,9 +48,9 @@ class Dimension implements Normalize
     /**
      * Measurements required in calculating the Chargeable Weight, If any of the Dimensional values are filled then the rest must be filled.
      * @param float $width
-     * @return $this
+     * @return Dimension
      */
-    public function setWidth(float $width)
+    public function setWidth(float $width): Dimension
     {
         $this->width = $width;
         return $this;
@@ -67,9 +67,9 @@ class Dimension implements Normalize
     /**
      * Measurements required in calculating the Chargeable Weight, If any of the Dimensional values are filled then the rest must be filled.
      * @param float $height
-     * @return $this
+     * @return Dimension
      */
-    public function setHeight(float $height)
+    public function setHeight(float $height): Dimension
     {
         $this->height = $height;
         return $this;
@@ -88,9 +88,9 @@ class Dimension implements Normalize
      * CM = Centimeter
      * M = Meter
      * @param string $unit
-     * @return $this
+     * @return Dimension
      */
-    public function setUnit(string $unit)
+    public function setUnit(string $unit): Dimension
     {
         $this->unit = $unit;
         return $this;
@@ -98,20 +98,22 @@ class Dimension implements Normalize
 
     /**
      * Centimeter
-     * @return $this
+     * @return Dimension
      */
-    public function useCentimeterAsUnit()
+    public function useCentimeterAsUnit(): Dimension
     {
-        return $this->setUnit('CM');
+        $this->setUnit('CM');
+        return $this;
     }
 
     /**
      * Meter
-     * @return $this
+     * @return Dimension
      */
-    public function useMeterAsUnit()
+    public function useMeterAsUnit(): Dimension
     {
-        return $this->setUnit('M');
+        $this->setUnit('M');
+        return $this;
     }
 
     public function normalize(): array

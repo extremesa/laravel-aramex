@@ -30,7 +30,7 @@ class LabelInfo implements Normalize
      * @param int $reportId
      * @return $this
      */
-    public function setReportId(int $reportId)
+    public function setReportId(int $reportId): LabelInfo
     {
         $this->reportId = $reportId;
         return $this;
@@ -49,7 +49,7 @@ class LabelInfo implements Normalize
      * @param string $reportType : URL|RPT
      * @return $this
      */
-    public function setReportType(string $reportType)
+    public function setReportType(string $reportType): LabelInfo
     {
         $this->reportType = $reportType;
         return $this;

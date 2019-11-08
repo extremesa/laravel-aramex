@@ -27,9 +27,9 @@ class Weight implements Normalize
     /**
      * Unit of the weight
      * @param string $unit
-     * @return $this
+     * @return Weight
      */
-    public function setUnit(string $unit)
+    public function setUnit(string $unit): Weight
     {
         $this->unit = $unit;
         return $this;
@@ -46,10 +46,11 @@ class Weight implements Normalize
     /**
      * Shipment weight.
      * If the Data Entity ‘Dimensions’ are filled, charging weight is compared to actual and the highest value is filled here.
+     *
      * @param float $value
-     * @return $this
+     * @return Weight
      */
-    public function setValue(float $value)
+    public function setValue(float $value): Weight
     {
         $this->value = $value;
         return $this;
@@ -59,7 +60,7 @@ class Weight implements Normalize
      * Kilogram
      * @return Weight
      */
-    public function useKilogramAsUnit()
+    public function useKilogramAsUnit(): Weight
     {
         return $this->setUnit('KG');
     }
@@ -68,7 +69,7 @@ class Weight implements Normalize
      * Pound
      * @return Weight
      */
-    public function usePoundAsUnit()
+    public function usePoundAsUnit(): Weight
     {
         return $this->setUnit('LB');
     }

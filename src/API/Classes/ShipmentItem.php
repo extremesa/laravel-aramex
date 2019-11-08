@@ -31,9 +31,9 @@ class ShipmentItem implements Normalize
     /**
      * Type of packaging, for example. Cans, bottles, degradable Plastic. Conditional: If any of the Item element values are filled then the rest must be filled.
      * @param string $packageType
-     * @return $this
+     * @return ShipmentItem
      */
-    public function setPackageType(string $packageType)
+    public function setPackageType(string $packageType): ShipmentItem
     {
         $this->packageType = $packageType;
         return $this;
@@ -50,9 +50,9 @@ class ShipmentItem implements Normalize
     /**
      * Number of items
      * @param int $quantity
-     * @return $this
+     * @return ShipmentItem
      */
-    public function setQuantity(int $quantity)
+    public function setQuantity(int $quantity): ShipmentItem
     {
         $this->quantity = $quantity;
         return $this;
@@ -69,9 +69,9 @@ class ShipmentItem implements Normalize
     /**
      * Total Weight of the Items
      * @param Weight $weight
-     * @return $this
+     * @return ShipmentItem
      */
-    public function setWeight(Weight $weight)
+    public function setWeight(Weight $weight): ShipmentItem
     {
         $this->weight = $weight;
         return $this;
@@ -88,9 +88,9 @@ class ShipmentItem implements Normalize
     /**
      * Additional Comments or Information about the items
      * @param string $comments
-     * @return $this
+     * @return ShipmentItem
      */
-    public function setComments(string $comments)
+    public function setComments(string $comments): ShipmentItem
     {
         $this->comments = $comments;
         return $this;
@@ -106,9 +106,9 @@ class ShipmentItem implements Normalize
 
     /**
      * @param string $reference
-     * @return $this
+     * @return ShipmentItem
      */
-    public function setReference(string $reference)
+    public function setReference(string $reference): ShipmentItem
     {
         $this->reference = $reference;
         return $this;

@@ -38,9 +38,9 @@ class ShipmentDetails implements Normalize
     /**
      * Measurements required in calculating the Chargeable Weight, If any of the dimensional values are filled then the rest must be filled.
      * @param Dimension $dimensions
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setDimensions(Dimension $dimensions)
+    public function setDimensions(Dimension $dimensions): ShipmentDetails
     {
         $this->dimensions = $dimensions;
         return $this;
@@ -57,9 +57,9 @@ class ShipmentDetails implements Normalize
     /**
      * Total actual shipment weight. If the Dimensions are filled, charging weight is compared to actual and the highest value is filled here.
      * @param Weight $actualWeight
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setActualWeight(Weight $actualWeight)
+    public function setActualWeight(Weight $actualWeight): ShipmentDetails
     {
         $this->actualWeight = $actualWeight;
         return $this;
@@ -75,9 +75,9 @@ class ShipmentDetails implements Normalize
 
     /**
      * @param Weight $chargeableWeight
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setChargeableWeight(Weight $chargeableWeight)
+    public function setChargeableWeight(Weight $chargeableWeight): ShipmentDetails
     {
         $this->chargeableWeight = $chargeableWeight;
         return $this;
@@ -94,9 +94,9 @@ class ShipmentDetails implements Normalize
     /**
      * The Nature of Shipment Contents. Example: Clothes, Electronic
      * @param string $descriptionOfGoods
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setDescriptionOfGoods(string $descriptionOfGoods)
+    public function setDescriptionOfGoods(string $descriptionOfGoods): ShipmentDetails
     {
         $this->descriptionOfGoods = $descriptionOfGoods;
         return $this;
@@ -113,9 +113,9 @@ class ShipmentDetails implements Normalize
     /**
      * The Origin of which the product in the shipment came from
      * @param string $goodsOriginCountry
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setGoodsOriginCountry(string $goodsOriginCountry)
+    public function setGoodsOriginCountry(string $goodsOriginCountry): ShipmentDetails
     {
         $this->goodsOriginCountry = $goodsOriginCountry;
         return $this;
@@ -132,9 +132,9 @@ class ShipmentDetails implements Normalize
     /**
      * Number of shipment pieces
      * @param int $numberOfPieces
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setNumberOfPieces(int $numberOfPieces)
+    public function setNumberOfPieces(int $numberOfPieces): ShipmentDetails
     {
         $this->numberOfPieces = $numberOfPieces;
         return $this;
@@ -151,26 +151,27 @@ class ShipmentDetails implements Normalize
     /**
      * EXP = Express DOM = Domestic
      * @param string $productGroup
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setProductGroup(string $productGroup)
+    public function setProductGroup(string $productGroup): ShipmentDetails
     {
         $this->productGroup = $productGroup;
         return $this;
     }
 
     /**
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function useExpressAsProductGroup()
+    public function useExpressAsProductGroup(): ShipmentDetails
     {
         return $this->setProductGroup('EXP');
+
     }
 
     /**
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function useDomesticAsProductGroup()
+    public function useDomesticAsProductGroup(): ShipmentDetails
     {
         return $this->setProductGroup('DOM');
     }
@@ -186,9 +187,9 @@ class ShipmentDetails implements Normalize
     /**
      * Priority  Document  Express.
      * Urgent, time sensitive consignments containing printed matter or document material.
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function usePriorityDocumentExpressAsProductType()
+    public function usePriorityDocumentExpressAsProductType(): ShipmentDetails
     {
         return $this->setProductType('PDX');
     }
@@ -196,9 +197,9 @@ class ShipmentDetails implements Normalize
     /**
      * Priority Parcel Express.
      * Urgent, time sensitive consignments containing non-printed matter or non-document material.
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function usePriorityParcelExpressAsProductType()
+    public function usePriorityParcelExpressAsProductType(): ShipmentDetails
     {
         return $this->setProductType('PPX');
     }
@@ -206,9 +207,9 @@ class ShipmentDetails implements Normalize
     /**
      * Priority Letter Express.
      * Urgent, time sensitive consignments containing printed matter of weight less than 0.5 kg.
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function usePriorityLetterExpressAsProductType()
+    public function usePriorityLetterExpressAsProductType(): ShipmentDetails
     {
         return $this->setProductType('PLX');
     }
@@ -216,9 +217,9 @@ class ShipmentDetails implements Normalize
     /**
      * Deferred Document Express.
      * 2nd Day Delivery consignments containing printed matter or document material.
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function useDeferredDocumentExpressAsProductType()
+    public function useDeferredDocumentExpressAsProductType(): ShipmentDetails
     {
         return $this->setProductType('DDX');
     }
@@ -226,9 +227,9 @@ class ShipmentDetails implements Normalize
     /**
      * Deferred Parcel Express.
      * 2nd Day Delivery consignments containing non-printed matter or non-document material.
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setDeferredParcelExpressProductType()
+    public function setDeferredParcelExpressProductType(): ShipmentDetails
     {
         return $this->setProductType('DPX');
     }
@@ -236,9 +237,9 @@ class ShipmentDetails implements Normalize
     /**
      * Ground  Document Express.
      * Ground delivery consignments containing printed matter or document material.
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setGroundDocumentExpressProductType()
+    public function setGroundDocumentExpressProductType(): ShipmentDetails
     {
         return $this->setProductType('GDX');
     }
@@ -246,20 +247,19 @@ class ShipmentDetails implements Normalize
     /**
      * Ground Parcel Express.
      * Ground Delivery consignments containing non-printed matter or non-document material.
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setGroundParcelExpressProductType()
+    public function setGroundParcelExpressProductType(): ShipmentDetails
     {
         return $this->setProductType('GPX');
     }
 
-
     /**
      * Product Type involves the specification of certain features concerning the delivery of the product
      * @param string $productType
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setProductType(string $productType)
+    public function setProductType(string $productType): ShipmentDetails
     {
         $this->productType = $productType;
         return $this;
@@ -275,9 +275,9 @@ class ShipmentDetails implements Normalize
 
     /**
      * @param Money $customsValueAmount
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setCustomsValueAmount(Money $customsValueAmount)
+    public function setCustomsValueAmount(Money $customsValueAmount): ShipmentDetails
     {
         $this->customsValueAmount = $customsValueAmount;
         return $this;
@@ -294,9 +294,9 @@ class ShipmentDetails implements Normalize
     /**
      * Amount of Cash that is paid by the receiver of the package. Conditional - Based on the Services "COD" being filled.
      * @param Money $cashOnDeliveryAmount
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setCashOnDeliveryAmount(Money $cashOnDeliveryAmount)
+    public function setCashOnDeliveryAmount(Money $cashOnDeliveryAmount): ShipmentDetails
     {
         $this->cashOnDeliveryAmount = $cashOnDeliveryAmount;
         return $this;
@@ -313,9 +313,9 @@ class ShipmentDetails implements Normalize
     /**
      * Insurance Amount charged on shipment.
      * @param Money $insuranceAmount
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setInsuranceAmount(Money $insuranceAmount)
+    public function setInsuranceAmount(Money $insuranceAmount): ShipmentDetails
     {
         $this->insuranceAmount = $insuranceAmount;
         return $this;
@@ -332,9 +332,9 @@ class ShipmentDetails implements Normalize
     /**
      * Additional Cash that can be required for miscellaneous purposes.
      * @param Money $cashAdditionalAmount
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setCashAdditionalAmount(Money $cashAdditionalAmount)
+    public function setCashAdditionalAmount(Money $cashAdditionalAmount): ShipmentDetails
     {
         $this->cashAdditionalAmount = $cashAdditionalAmount;
         return $this;
@@ -351,9 +351,9 @@ class ShipmentDetails implements Normalize
     /**
      * Additional Services used in shipping the package, Separate by comma when selecting multiple services.
      * @param string $services
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setServices(string $services)
+    public function setServices(string $services): ShipmentDetails
     {
         $this->services = $services;
         return $this;
@@ -362,9 +362,9 @@ class ShipmentDetails implements Normalize
     /**
      * Cash on Delivery.
      * Receiver pays the cost of the goods
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function useCashOnDeliveryService()
+    public function useCashOnDeliveryService(): ShipmentDetails
     {
         return $this->setServices('COD');
     }
@@ -374,27 +374,27 @@ class ShipmentDetails implements Normalize
      * Committed delivery time at destination country.
      * @return $this
      */
-    public function useFirstAsService()
+    public function useFirstAsService(): ShipmentDetails
     {
         return $this->setServices('FIRST');
     }
 
-    public function useFreeDomicileAsService()
+    public function useFreeDomicileAsService(): ShipmentDetails
     {
         return $this->setServices('FRDOM');
     }
 
-    public function useHoldForPickupAsService()
+    public function useHoldForPickupAsService(): ShipmentDetails
     {
         return $this->setServices('HFPU');
     }
 
-    public function useNoonDeliveryAsService()
+    public function useNoonDeliveryAsService(): ShipmentDetails
     {
         return $this->setServices('NOON');
     }
 
-    public function useSignatureRequiredAsService()
+    public function useSignatureRequiredAsService(): ShipmentDetails
     {
         return $this->setServices('SIG');
     }
@@ -410,9 +410,9 @@ class ShipmentDetails implements Normalize
     /**
      * Details of the Items within a shipment. Several items can be added for a single shipment.
      * @param $items
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setItems($items)
+    public function setItems($items): ShipmentDetails
     {
         $this->items = $items;
         return $this;
@@ -420,9 +420,9 @@ class ShipmentDetails implements Normalize
 
     /**
      * @param ShipmentItem $item
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function addItem(ShipmentItem $item)
+    public function addItem(ShipmentItem $item): ShipmentDetails
     {
         $this->items[] = $item;
         return $this;
@@ -439,9 +439,9 @@ class ShipmentDetails implements Normalize
     /**
      * Method of payment for shipment.
      * @param string $paymentType
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function setPaymentType(string $paymentType)
+    public function setPaymentType(string $paymentType): ShipmentDetails
     {
         $this->paymentType = $paymentType;
         return $this;
@@ -450,9 +450,9 @@ class ShipmentDetails implements Normalize
     /**
      * Prepaid.
      * Transportation Charges payable by shipper.
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function usePrepaidAsPaymentType()
+    public function usePrepaidAsPaymentType(): ShipmentDetails
     {
         return $this->setPaymentType('P');
     }
@@ -460,9 +460,9 @@ class ShipmentDetails implements Normalize
     /**
      * Collect.
      * Transportation Charges payable by consignee.
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function useCollectAsPaymentType()
+    public function useCollectAsPaymentType(): ShipmentDetails
     {
         return $this->setPaymentType('C');
     }
@@ -470,9 +470,9 @@ class ShipmentDetails implements Normalize
     /**
      * Third Party.
      * Transportation Charges payable by third party. Note: in case of 3rd Party all third party details must be filled including a valid Aramex Account Number for Billing Party.
-     * @return $this
+     * @return ShipmentDetails
      */
-    public function useThirdPartyAsPaymentType()
+    public function useThirdPartyAsPaymentType(): ShipmentDetails
     {
         return $this->setPaymentType('T');
     }

@@ -21,10 +21,12 @@ class DateTime implements Normalize
     /**
      * The date Aramex receives the shipment to be shipped out.
      * @param mixed $shippingDate
+     * @return DateTime
      */
-    public function setShippingDate($shippingDate): void
+    public function setShippingDate($shippingDate): DateTime
     {
         $this->shippingDate = $shippingDate;
+        return $this;
     }
 
     /**
@@ -38,10 +40,12 @@ class DateTime implements Normalize
     /**
      * The date specified for shipment to be delivered to the consignee.
      * @param mixed $dueDate
+     * @return DateTime
      */
-    public function setDueDate($dueDate): void
+    public function setDueDate($dueDate): DateTime
     {
         $this->dueDate = $dueDate;
+        return $this;
     }
 
 

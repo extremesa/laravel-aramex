@@ -26,9 +26,9 @@ class Notification
      * To Identify the notification category.
      *
      * @param string $code
-     * @return $this
+     * @return Notification
      */
-    public function setCode(string $code)
+    public function setCode(string $code): Notification
     {
         $this->code = $code;
         return $this;
@@ -46,9 +46,9 @@ class Notification
      * Deeper description of the Notification.
      *
      * @param string $message
-     * @return $this
+     * @return Notification
      */
-    public function setMessage(string $message)
+    public function setMessage(string $message): Notification
     {
         $this->message = $message;
         return $this;
@@ -74,7 +74,7 @@ class Notification
         }, $notificationsData);
     }
 
-    public static function parse($item)
+    public static function parse($item): Notification
     {
         return (new self())
             ->setCode(object_get($item, 'Code'))

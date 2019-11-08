@@ -36,7 +36,7 @@ class ScheduleDelivery extends API implements Normalize
      * @return ScheduledDeliveryResponse
      * @throws Exception
      */
-    public function make(): ScheduledDeliveryResponse
+    public function run(): ScheduledDeliveryResponse
     {
         $this->validate();
 
