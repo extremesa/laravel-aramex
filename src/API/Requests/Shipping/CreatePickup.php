@@ -28,7 +28,7 @@ class CreatePickup extends API implements Normalize
      * @return PickupCreationResponse
      * @throws Exception
      */
-    public function make(): PickupCreationResponse
+    public function run(): PickupCreationResponse
     {
         $this->validate();
 

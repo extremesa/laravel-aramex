@@ -42,36 +42,36 @@ Run the following command to install the latest applicable version of the packag
 #### Fetch Countries
 This method allows users to get the world countries list.
 
-    Aramex::FetchCountries()->make();
+    Aramex::fetchCountries()->run();
 
 #### Fetch Country
 This method allows users to get details of a certain country. 
 
-    Aramex::FetchCountry()
+    Aramex::fetchCountry()
         ->setCode('PS')
-        ->make();
+        ->run();
 
 #### Fetch States
 This method allows users to get all the states within a certain country (country code).
 
-    Aramex::FetchStates()
+    Aramex::fetchStates()
         ->setCountryCode('AE')
-        ->make();
+        ->run();
 
 #### Fetch Cities
 This method allows users to get all the cities within a certain country (country code). And allows users to get list of the cities that start with a specific prefix. The required nodes to be filled are Client Info and Country Code. 
 
-    Aramex::FetchCities()
+    Aramex::fetchCities()
         ->setCountryCode('AE')
-        ->make();
+        ->run();
 
 #### Validate Address
 This method Allows users to search for certain addresses and make sure that the address structure is correct. 
  
-    Aramex::ValidateAddress()
+    Aramex::validateAddress()
         ->setAddress(
             (new Address()) ...
-        )->make()
+        )->run();
 
 ### Rate
 
@@ -84,12 +84,12 @@ This method allows users to get rate for source/destinations shipment.
 
     $details = (new ShipmentDetails()) ...;
 
-    Aramex::CalculateRate()
+    Aramex::calculateRate()
         ->setOriginalAddress($source)
         ->setDestinationAddress($destination)
         ->setShipmentDetails($details)
         ->setPreferredCurrencyCode('USD')
-        ->make();
+        ->run();
 
 ### Shipping
 
@@ -118,30 +118,30 @@ This method allows users to create a pickup request.
         ->setReportId(9201)
         ->setReportType('URL');
         
-    Aramex::CreatePickup()
+    Aramex::createPickup()
         ->setLabelInfo($labelInfo)
         ->setPickup($pickup)
-        ->make();
+        ->run();
 
 #### Cancel Pickup
 This method allows you to cancel a pickup as long as it is un-assigned or pending details.
 
-    Aramex::CancelPickup()
+    Aramex::cancelPickup()
         ->setPickupGUID('PICKUP_GUID')
-        ->make();
+        ->run();
 
 #### Create Shipments
 This method allows users to create shipments on Aramex’s system.
 
-    Aramex::CreateShipments()->make();
+    Aramex::createShipments()->run();
 
 #### Get Last Shipments Numbers Range
 This method allows you to inquire about the last reserved range using a specific entity and product group
 
-    Aramex::GetLastShipmentsNumbersRange()
+    Aramex::getLastShipmentsNumbersRange()
         ->setEntity('ENTITY')
         ->setProductGroup('PRODUCT_GROUP')
-        ->make();
+        ->run();
 
 #### Print Label
 This method allows the user to print a label for an existing shipment.
@@ -150,37 +150,37 @@ This method allows the user to print a label for an existing shipment.
         ->setReportId(9201)
         ->setReportType('URL');
         
-    Aramex::PrintLabel()
+    Aramex::printLabel()
         ->setShipmentNumber('SHIPMENT_NO')
         ->setLabelInfo()
-        ->make();
+        ->run();
 
 #### Reserve Shipment Number Range
 This method allows you to reserve a range of shipment numbers.
 
-    Aramex::ReserveShipmentNumberRange()->make();
+    Aramex::reserveShipmentNumberRange()->run();
 
 #### Schedule Delivery
 This method allows you to schedule the delivery of a shipment at a specified time and place (Longitude and Latitude)
 
-    Aramex::ScheduleDelivery()->make();
+    Aramex::scheduleDelivery()->run();
 
 ### Tracking
 
 #### Track Pickup
 This method allows the user to track an existing pickup’s updates and latest status.
 
-    Aramex::TrackPickup()
+    Aramex::trackPickup()
         ->setReference('PICKUP_NO')
         ->setPickup('PICKUP') // any number
-        ->track();
+        ->run();
 
 #### Track Shipments
 This method allows the user to track an existing shipment’s updates and latest status.
 
-    Aramex::TrackShipments()
+    Aramex::trackShipments()
         ->setShipments(['SHIPMENT_NO'])
-        ->make();
+        ->run();
         
 ## Credits
 

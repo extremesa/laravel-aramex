@@ -27,7 +27,7 @@ class FetchCities extends API implements Normalize
      * @return CitiesFetchingResponse
      * @throws \Exception
      */
-    public function make()
+    public function run()
     {
         $this->validate();
 

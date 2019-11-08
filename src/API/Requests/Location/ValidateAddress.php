@@ -25,7 +25,7 @@ class ValidateAddress extends API implements Normalize
      * @return AddressValidationResponse
      * @throws \Exception
      */
-    public function make()
+    public function run()
     {
         $this->validate();
 

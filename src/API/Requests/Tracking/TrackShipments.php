@@ -25,7 +25,7 @@ class TrackShipments extends API implements Normalize
      * @return ShipmentTrackingResponse
      * @throws Exception
      */
-    public function make()
+    public function run()
     {
         $this->validate();
 
