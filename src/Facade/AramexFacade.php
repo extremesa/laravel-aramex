@@ -1,6 +1,6 @@
 <?php
 
-namespace ExtremeSa\Aramex;
+namespace ExtremeSa\Aramex\Facade;
 
 use ExtremeSa\Aramex\API\Requests\Location\FetchCities;
 use ExtremeSa\Aramex\API\Requests\Location\FetchCountries;
@@ -43,7 +43,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static TrackPickup trackPickup
  * @method static TrackShipments trackShipments
  */
-class AramexFacade extends Facade
+class Aramex extends Facade
 {
     /**
      * Get the registered name of the component.
