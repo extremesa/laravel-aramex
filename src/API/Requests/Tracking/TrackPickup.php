@@ -21,7 +21,7 @@ class TrackPickup extends API implements Normalize
      * @return PickupTrackingResponse
      * @throws Exception
      */
-    public function track()
+    public function make()
     {
         $this->validate();
 

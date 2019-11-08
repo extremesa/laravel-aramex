@@ -15,7 +15,7 @@ class FetchCountries extends API implements Normalize
      * @return CountriesFetchingResponse
      * @throws \Exception
      */
-    public function fetch()
+    public function make()
     {
         $this->validate();
 
