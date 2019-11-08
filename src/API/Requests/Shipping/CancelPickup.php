@@ -25,7 +25,7 @@ class CancelPickup extends API implements Normalize
      * @return PickupCancellationResponse
      * @throws Exception
      */
-    public function create(): PickupCancellationResponse
+    public function make(): PickupCancellationResponse
     {
         $this->validate();
 

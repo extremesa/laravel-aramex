@@ -25,7 +25,7 @@ class FetchOffices extends API implements Normalize
      * @return OfficesFetchingResponse
      * @throws Exception
      */
-    public function fetch()
+    public function make()
     {
         $this->validate();
 

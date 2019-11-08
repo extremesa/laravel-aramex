@@ -26,7 +26,7 @@ class ReserveShipmentNumberRange extends API implements Normalize
      * @return ReserveRangeResponse
      * @throws Exception
      */
-    public function create(): ReserveRangeResponse
+    public function make(): ReserveRangeResponse
     {
         $this->validate();
 

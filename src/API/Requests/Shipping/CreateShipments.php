@@ -28,7 +28,7 @@ class CreateShipments extends API implements Normalize
      * @return ShipmentCreationResponse
      * @throws Exception
      */
-    public function create(): ShipmentCreationResponse
+    public function make(): ShipmentCreationResponse
     {
         $this->validate();
 

@@ -29,7 +29,7 @@ class CalculateRate extends API implements Normalize
      * @return RateCalculatorResponse
      * @throws Exception
      */
-    public function calculate()
+    public function make()
     {
         $this->validate();
 

@@ -25,7 +25,7 @@ class GetLastShipmentsNumbersRange extends API implements Normalize
      * @return LastReservedShipmentNumberRangeResponse
      * @throws Exception
      */
-    public function create(): LastReservedShipmentNumberRangeResponse
+    public function make(): LastReservedShipmentNumberRangeResponse
     {
         $this->validate();
 
