@@ -2,7 +2,7 @@
 
 Adds Aramex Functionality to Laravel.
 
-This repo is a rebuild of digitalcloud/aramex.
+This repo is a full rebuild of DigitalCloud/aramex.
 
 ## Table of Contents
 
@@ -27,6 +27,7 @@ This repo is a rebuild of digitalcloud/aramex.
     * Tracking
         * Track Pickup
         * Track Shipments
+* Credits
 
 ## Installation
 
