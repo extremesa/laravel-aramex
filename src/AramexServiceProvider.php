@@ -2,6 +2,7 @@
 
 namespace ExtremeSa\Aramex;
 
+use ExtremeSa\Aramex\Aramex as AramexClass;
 use Illuminate\Support\ServiceProvider;
 
 class AramexServiceProvider extends ServiceProvider
@@ -25,7 +26,7 @@ class AramexServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(Aramex::class, function () {
-            return new Aramex($this->app);
+            return new AramexClass($this->app);
         });
     }
 }
