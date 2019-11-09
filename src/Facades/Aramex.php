@@ -19,6 +19,7 @@ use ExtremeSa\Aramex\API\Requests\Shipping\ReserveShipmentNumberRange;
 use ExtremeSa\Aramex\API\Requests\Shipping\ScheduleDelivery;
 use ExtremeSa\Aramex\API\Requests\Tracking\TrackPickup;
 use ExtremeSa\Aramex\API\Requests\Tracking\TrackShipments;
+use ExtremeSa\Aramex\Aramex as AramexClass;
 use Illuminate\Support\Facades\Facade;
 
 /**
@@ -52,6 +53,6 @@ class Aramex extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return Aramex::class;
+        return AramexClass::class;
     }
 }
