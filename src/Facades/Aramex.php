@@ -1,6 +1,6 @@
 <?php
 
-namespace ExtremeSa\Aramex\Facade;
+namespace ExtremeSa\Aramex\Facades;
 
 use ExtremeSa\Aramex\API\Requests\Location\FetchCities;
 use ExtremeSa\Aramex\API\Requests\Location\FetchCountries;
@@ -22,7 +22,7 @@ use ExtremeSa\Aramex\API\Requests\Tracking\TrackShipments;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class AramexFacade
+ * Class Aramex
  * @package ExtremeSa\Aramex
  *
  * @method static FetchCities fetchCities
