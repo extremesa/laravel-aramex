@@ -49,6 +49,8 @@ class CitiesFetchingResponse extends Response
             $this->setCities($obj->Cities->string);
         } elseif ($obj->Cities && property_exists($obj->Cities, 'string') && is_string($obj->Cities->string)) {
             $this->setCities([$obj->Cities->string]);
+        } else {
+            $this->setCities([]);
         }
 
         return $this;
