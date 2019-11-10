@@ -1,6 +1,6 @@
 <?php
 
-namespace ExtremeSa\Aramex\Facade;
+namespace ExtremeSa\Aramex\Facades;
 
 use ExtremeSa\Aramex\API\Requests\Location\FetchCities;
 use ExtremeSa\Aramex\API\Requests\Location\FetchCountries;
@@ -19,10 +19,11 @@ use ExtremeSa\Aramex\API\Requests\Shipping\ReserveShipmentNumberRange;
 use ExtremeSa\Aramex\API\Requests\Shipping\ScheduleDelivery;
 use ExtremeSa\Aramex\API\Requests\Tracking\TrackPickup;
 use ExtremeSa\Aramex\API\Requests\Tracking\TrackShipments;
+use ExtremeSa\Aramex\Aramex as AramexClass;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class AramexFacade
+ * Class Aramex
  * @package ExtremeSa\Aramex
  *
  * @method static FetchCities fetchCities
@@ -52,6 +53,6 @@ class Aramex extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return Aramex::class;
+        return AramexClass::class;
     }
 }

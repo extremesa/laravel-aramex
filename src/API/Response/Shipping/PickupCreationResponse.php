@@ -45,19 +45,21 @@ class PickupCreationResponse extends Response
     {
         parent::parse($obj);
 
-        $processedPickupObj = $obj->ProcessedPickup;
+        if (!$this->getHasErrors() && property_exists($obj, 'ProcessedPickup')) {
 
-        $processedShipments = collect($processedPickupObj->ProcessedShipments)->toArray();
+            $processedPickupObj = $obj->ProcessedPickup;
 
-        $processedPickup = new ProcessedPickup();
-        $processedPickup = $processedPickup
-            ->setId($processedPickupObj->ID)
-            ->setGUID($processedPickupObj->GUID)
-            ->setReference1($processedPickupObj->Reference1)
-            ->setReference2($processedPickupObj->Reference2)
-            ->setProcessedShipments($processedShipments);
+            $processedShipments = collect($processedPickupObj->ProcessedShipments)->toArray();
+            $processedPickup = new ProcessedPickup();
+            $processedPickup = $processedPickup
+                ->setId($processedPickupObj->ID)
+                ->setGUID($processedPickupObj->GUID)
+                ->setReference1($processedPickupObj->Reference1)
+                ->setReference2($processedPickupObj->Reference2)
+                ->setProcessedShipments($processedShipments);
 
-        $this->setPrecessedPickup($processedPickup);
+            $this->setPrecessedPickup($processedPickup);
+        }
 
         return $this;
     }

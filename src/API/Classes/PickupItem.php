@@ -100,7 +100,6 @@ class PickupItem implements Normalize
     /**
      * Type of packaging, for example.
      * Cans, bottles, degradable Plastic.
-     * Options: P,C,3
      *
      * @param string $packageType
      * @return PickupItem
