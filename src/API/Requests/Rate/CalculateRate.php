@@ -20,12 +20,6 @@ class CalculateRate extends API implements Normalize
     protected $live_wsdl = 'https://ws.aramex.net/ShippingAPI.V2/RateCalculator/Service_1_0.svc?wsdl';
     protected $test_wsdl = 'https://ws.aramex.net/ShippingAPI.V2/RateCalculator/Service_1_0.svc?wsdl';
 
-    public function __construct()
-    {
-        $this->useLiveAsEnvironment();
-
-        parent::__construct();
-    }
 
     /**
      * @return RateCalculatorResponse

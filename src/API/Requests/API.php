@@ -22,11 +22,7 @@ abstract class API implements Normalize
 
     public function __construct()
     {
-        if ($this->environment) {
-            $this->setEnvironment($this->environment);
-        } else {
-            config('aramex.mode') === 'live' ? $this->useLiveAsEnvironment() : $this->useTestAsEnvironment();
-        }
+        config('aramex.mode') === 'live' ? $this->useLiveAsEnvironment() : $this->useTestAsEnvironment();
 
         $this->fillClientInfoFromEnv();
 
