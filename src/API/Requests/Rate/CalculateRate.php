@@ -18,7 +18,7 @@ class CalculateRate extends API implements Normalize
     private $preferredCurrencyCode;
 
     protected $live_wsdl = 'https://ws.aramex.net/ShippingAPI.V2/RateCalculator/Service_1_0.svc?wsdl';
-    protected $test_wsdl = 'https://ws.aramex.net/ShippingAPI.V2/RateCalculator/Service_1_0.svc?wsdl';
+    protected $test_wsdl = 'https://ws.dev.aramex.net/ShippingAPI.V2/RateCalculator/Service_1_0.svc?wsdl';
 
 
     /**
