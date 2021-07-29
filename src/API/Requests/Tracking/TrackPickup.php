@@ -16,7 +16,7 @@ use ExtremeSa\Aramex\API\Response\Tracking\PickupTrackingResponse;
 class TrackPickup extends API implements Normalize
 {
     protected $live_wsdl = 'https://ws.aramex.net/ShippingAPI.V2/tracking/Service_1_0.svc?wsdl';
-    protected $test_wsdl = 'https://ws.aramex.net/ShippingAPI.V2/tracking/Service_1_0.svc?wsdl';
+    protected $test_wsdl = 'https://ws.dev.aramex.net/ShippingAPI.V2/tracking/Service_1_0.svc?wsdl';
 
     private $shipments;
     private $reference;
